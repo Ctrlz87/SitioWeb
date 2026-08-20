@@ -104,34 +104,37 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="mobile-menu closed">
-    <div class="flex items-center justify-between px-4 h-16 border-b border-gray-100">
-      <span class="text-lg font-bold font-jakarta text-navy">Cognitiva Integral</span>
-      <button id="close-menu" class="p-2 text-slate-500 hover:text-navy" aria-label="Cerrar menú">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+  <div id="mobile-panel" class="mobile-panel">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+      <span class="font-bold text-lg text-navy" style="font-family:'Plus Jakarta Sans',sans-serif;">Menú</span>
+      <button id="close-menu" class="w-9 h-9 flex items-center justify-center rounded-md hover:bg-gray-100 transition-colors" aria-label="Cerrar menú">
+        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div class="px-6 py-8 flex flex-col gap-1">
-      <a href="index.html" class="mobile-link py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">Inicio</a>
-      <div>
-        <button id="mobile-services-btn" class="flex items-center justify-between w-full py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">
-          Servicios
-          <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    <div class="flex-1 overflow-y-auto py-4 px-5">
+      <a href="index.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Inicio</a>
+      <div class="py-2.5 border-b border-gray-50">
+        <button id="mobile-services-btn" class="flex items-center justify-between w-full text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors">
+          <span>Servicios</span>
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="mobile-services-menu" class="hidden pl-4 pb-2">
-          <a href="neuropsicologia.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Neuropsicología</a>
-          <a href="psicologia.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Psicología</a>
-          <a href="neurofeedback.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Neurofeedback</a>
-          <a href="rehabilitacion-cognitiva.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Rehabilitación Cognitiva</a>
-          <a href="evaluacion-cerebral.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Evaluación Cerebral</a>
-          <a href="neurotecnologias.html" class="mobile-link block py-2 text-sm text-slate-600 hover:text-teal">Neurotecnologías</a>
+        <div id="mobile-services-menu" class="hidden pl-4 mt-1 space-y-1">
+          <a href="neuropsicologia.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neuropsicología</a>
+          <a href="psicologia.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Psicología</a>
+          <a href="neurofeedback.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neurofeedback</a>
+          <a href="rehabilitacion-cognitiva.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Rehabilitación Cognitiva</a>
+          <a href="evaluacion-cerebral.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Evaluación Cerebral</a>
+          <a href="neurotecnologias.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neurotecnologías</a>
         </div>
       </div>
-      <a href="sobre-nosotros.html" class="mobile-link py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">Sobre Nosotros</a>
-      <a href="blog.html" class="mobile-link py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">Blog</a>
-      <a href="testimonios.html" class="mobile-link py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">Testimonios</a>
-      <a href="contacto.html" class="mobile-link py-3 text-base font-medium text-slate-700 hover:text-teal border-b border-gray-50">Contacto</a>
-      <a href="contacto.html" class="mobile-link mt-4 btn-primary text-center bg-[#10B981]">Agendar Valoración</a>
+      <a href="sobre-nosotros.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Sobre Nosotros</a>
+      <a href="blog.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Blog</a>
+      <a href="testimonios.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Testimonios</a>
+      <a href="contacto.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Contacto</a>
+    </div>
+    <div class="px-5 py-4 border-t border-gray-100">
+      <a href="contacto.html" class="mobile-link flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white text-sm font-semibold rounded-md px-5 py-3 w-full transition-colors">Agendar Valoración</a>
     </div>
   </div>
 

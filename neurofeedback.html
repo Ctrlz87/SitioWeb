@@ -49,15 +49,18 @@
             Servicios
             <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
-          <div id="services-dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50">
-            <a href="neuropsicologia.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neuropsicología</a>
-            <a href="psicologia.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Psicología</a>
-            <a href="neurofeedback.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neurofeedback</a>
+          <div id="services-dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
+            <a href="neuropsicologia.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neuropsicología</a>
+            <a href="psicologia.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Psicología</a>
+            <a href="neurofeedback.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neurofeedback</a>
+            <a href="rehabilitacion-cognitiva.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Rehabilitación Cognitiva</a>
+            <a href="evaluacion-cerebral.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Evaluación Cerebral</a>
+            <a href="neurotecnologias.html" class="block px-4 py-2.5 text-sm text-slate-700 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neurotecnologías</a>
           </div>
         </div>
-        <a href="#sobre-nosotros" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Sobre Nosotros</a>
-        <a href="#blog" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Blog</a>
-        <a href="#testimonios" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Testimonios</a>
+        <a href="sobre-nosotros.html" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Sobre Nosotros</a>
+        <a href="blog.html" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Blog</a>
+        <a href="testimonios.html" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Testimonios</a>
         <a href="#contacto" class="text-sm font-medium text-slate-600 hover:text-sky-500 transition-colors">Contacto</a>
       </div>
       <div class="hidden lg:flex items-center gap-4">
@@ -69,36 +72,37 @@
     </div>
   </nav>
 
-  <div id="mobile-menu" class="mobile-menu closed">
-    <div class="flex items-center justify-between px-4 py-4 border-b border-slate-100">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-white text-xs" style="background: linear-gradient(135deg, #0EA5E9, #06B6D4);">CI</div>
-        <span class="text-lg font-bold text-navy" style="font-family: 'Plus Jakarta Sans', sans-serif;">Cognitiva Integral</span>
-      </a>
-      <button id="close-menu" class="p-2 text-slate-400 hover:text-slate-600 transition-colors" aria-label="Cerrar menú">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+  <div id="mobile-panel" class="mobile-panel">
+    <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+      <span class="font-bold text-lg text-navy" style="font-family:'Plus Jakarta Sans',sans-serif;">Menú</span>
+      <button id="close-menu" class="w-9 h-9 flex items-center justify-center rounded-md hover:bg-gray-100 transition-colors" aria-label="Cerrar menú">
+        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
-    <div class="px-4 py-6 space-y-1">
-      <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">Inicio</a>
-      <div>
-        <button id="mobile-services-btn" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">
-          Servicios
-          <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    <div class="flex-1 overflow-y-auto py-4 px-5">
+      <a href="index.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Inicio</a>
+      <div class="py-2.5 border-b border-gray-50">
+        <button id="mobile-services-btn" class="flex items-center justify-between w-full text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors">
+          <span>Servicios</span>
+          <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="mobile-services-menu" class="hidden pl-6 mt-1 space-y-1">
-          <a href="neuropsicologia.html" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neuropsicología</a>
-          <a href="psicologia.html" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Psicología</a>
-          <a href="neurofeedback.html" class="mobile-link block px-4 py-2.5 rounded-lg text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors">Neurofeedback</a>
+        <div id="mobile-services-menu" class="hidden pl-4 mt-1 space-y-1">
+          <a href="neuropsicologia.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neuropsicología</a>
+          <a href="psicologia.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Psicología</a>
+          <a href="neurofeedback.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neurofeedback</a>
+          <a href="rehabilitacion-cognitiva.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Rehabilitación Cognitiva</a>
+          <a href="evaluacion-cerebral.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Evaluación Cerebral</a>
+          <a href="neurotecnologias.html" class="mobile-link block py-2 text-sm text-gray-600 hover:text-[#0EA5E9] transition-colors">Neurotecnologías</a>
         </div>
       </div>
-      <a href="#sobre-nosotros" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">Sobre Nosotros</a>
-      <a href="#blog" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">Blog</a>
-      <a href="#testimonios" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">Testimonios</a>
-      <a href="#contacto" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 font-medium hover:bg-sky-50 hover:text-sky-600 transition-colors">Contacto</a>
-      <div class="pt-4">
-        <a href="#contacto" class="mobile-link btn-primary w-full text-center text-sm">Agendar Valoración</a>
-      </div>
+      <a href="sobre-nosotros.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Sobre Nosotros</a>
+      <a href="blog.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Blog</a>
+      <a href="testimonios.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Testimonios</a>
+      <a href="contacto.html" class="mobile-link block py-2.5 text-sm font-medium text-gray-700 hover:text-[#0EA5E9] transition-colors border-b border-gray-50">Contacto</a>
+    </div>
+    <div class="px-5 py-4 border-t border-gray-100">
+      <a href="contacto.html" class="mobile-link flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white text-sm font-semibold rounded-md px-5 py-3 w-full transition-colors">Agendar Valoración</a>
     </div>
   </div>
 
@@ -305,7 +309,7 @@
         <h2 class="section-title mb-4">Solicita tu Evaluación</h2>
         <p class="section-subtitle mx-auto">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
       </div>
-      <form data-validate class="card p-8 fade-in">
+      <form data-validate data-form="whatsapp" class="card p-8 fade-in">
         <div class="grid sm:grid-cols-2 gap-6 mb-6">
           <div>
             <label for="nombre" class="block text-sm font-medium text-slate-700 mb-2">Nombre completo *</label>
