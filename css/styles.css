@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #0F172A;
+    --teal: #0EA5E9;
+    --teal-dark: #0284C7;
+    --accent: #10B981;
+    --accent-dark: #059669;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --slate: #64748B;
+    --slate-light: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-white transition-all duration-300;
+    background-color: var(--accent);
+  }
+  .btn-primary:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-white transition-all duration-300;
+    background-color: var(--teal);
+  }
+  .btn-secondary:hover {
+    background-color: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold border-2 transition-all duration-300;
+    color: var(--teal);
+    border-color: var(--teal);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    color: white;
+    background-color: var(--teal);
+    transform: translateY(-2px);
+  }
+
+  .card {
+    @apply bg-white rounded-[10px] p-6 transition-all duration-300;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+  .card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold;
+    color: var(--navy);
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl max-w-3xl;
+    color: var(--slate);
+  }
+
+  .top-bar {
+    @apply text-sm py-2;
+    background-color: var(--navy);
+    color: white;
+  }
+
+  .navbar {
+    @apply sticky top-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  .navbar.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--navy) 0%, #1E3A5F 50%, #164E63 100%);
+  }
+
+  .service-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-4;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 182, 212, 0.1));
+    color: var(--teal);
+  }
+
+  .process-step {
+    @apply relative flex items-start gap-6;
+  }
+  .process-step::before {
+    content: '';
+    @apply absolute left-6 top-14 w-0.5 h-full;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+  }
+  .process-step:last-child::before {
+    display: none;
+  }
+
+  .testimonial-card {
+    @apply bg-white rounded-[10px] p-8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .blog-card {
+    @apply bg-white rounded-[10px] overflow-hidden transition-all duration-300;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .blog-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110;
+    background-color: #25D366;
+  }
+  .whatsapp-float:hover {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--teal);
+  }
+
+  .footer {
+    @apply py-12;
+    background-color: var(--navy);
+    color: white;
+  }
+
+  .mobile-menu {
+    @apply fixed inset-0 z-40 bg-white transform transition-transform duration-300;
+  }
+  .mobile-menu.closed {
+    @apply -translate-x-full;
+  }
+  .mobile-menu.open {
+    @apply translate-x-0;
+  }
+}
+
+@layer utilities {
+  .text-navy { color: var(--navy); }
+  .text-teal { color: var(--teal); }
+  .text-accent { color: var(--accent); }
+  .bg-navy { background-color: var(--navy); }
+  .bg-teal { background-color: var(--teal); }
+  .bg-accent { background-color: var(--accent); }
+  .bg-light { background-color: var(--bg-light); }
+  .border-teal { border-color: var(--teal); }
+}

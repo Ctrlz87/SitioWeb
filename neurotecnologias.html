@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurotecnologias | Cognitiva Integral</title>
+  <meta name="description" content="Tecnologia especializada al servicio del bienestar cognitivo en Cognitiva Integral.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0F172A',
+            teal: '#0EA5E9',
+            accent: '#10B981',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white">
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Cl. 13b #13-100, piso 3, Valledupar, Cesar
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +57 316 228 2769
+        </span>
+      </div>
+      <div class="flex items-center gap-4 flex-wrap">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          +57 316 228 2769
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          integralcognitiva@gmail.com
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <span class="text-xl font-bold text-navy" style="font-family:'Plus Jakarta Sans',sans-serif;">Cognitiva Integral</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">Inicio</a>
+        <div class="relative">
+          <button id="services-dropdown-btn" class="flex items-center gap-1 text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">
+            Servicios
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="services-dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl py-2 z-50">
+            <a href="rehabilitacion-cognitiva.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-[#0EA5E9] transition-colors">Rehabilitacion Cognitiva</a>
+            <a href="evaluacion-cerebral.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-[#0EA5E9] transition-colors">Evaluacion Cerebral</a>
+            <a href="neurotecnologias.html" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-sky-50 hover:text-[#0EA5E9] transition-colors">Neurotecnologias</a>
+          </div>
+        </div>
+        <a href="sobre-nosotros.html" class="text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">Sobre Nosotros</a>
+        <a href="blog.html" class="text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">Blog</a>
+        <a href="testimonios.html" class="text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">Testimonios</a>
+        <a href="contacto.html" class="text-slate-600 hover:text-[#0EA5E9] font-medium transition-colors">Contacto</a>
+        <a href="contacto.html" class="btn-primary text-sm bg-[#10B981] hover:bg-[#059669]">Agendar Valoracion</a>
+      </div>
+      <button id="menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu closed">
+    <div class="flex justify-between items-center px-4 h-16 border-b border-slate-100">
+      <span class="text-lg font-bold text-navy" style="font-family:'Plus Jakarta Sans',sans-serif;">Cognitiva Integral</span>
+      <button id="close-menu" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="px-6 py-6 flex flex-col gap-1">
+      <a href="index.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">Inicio</a>
+      <div>
+        <button id="mobile-services-btn" class="mobile-link w-full flex items-center justify-between px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">
+          Servicios
+          <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="mobile-services-menu" class="hidden pl-6 pb-2">
+          <a href="rehabilitacion-cognitiva.html" class="mobile-link block px-4 py-2.5 text-sm text-slate-600 hover:text-[#0EA5E9] rounded-lg transition-colors">Rehabilitacion Cognitiva</a>
+          <a href="evaluacion-cerebral.html" class="mobile-link block px-4 py-2.5 text-sm text-slate-600 hover:text-[#0EA5E9] rounded-lg transition-colors">Evaluacion Cerebral</a>
+          <a href="neurotecnologias.html" class="mobile-link block px-4 py-2.5 text-sm text-slate-600 hover:text-[#0EA5E9] rounded-lg transition-colors">Neurotecnologias</a>
+        </div>
+      </div>
+      <a href="sobre-nosotros.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">Sobre Nosotros</a>
+      <a href="blog.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">Blog</a>
+      <a href="testimonios.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">Testimonios</a>
+      <a href="contacto.html" class="mobile-link block px-4 py-3 rounded-lg text-slate-700 hover:bg-sky-50 hover:text-[#0EA5E9] font-medium transition-colors">Contacto</a>
+      <a href="contacto.html" class="mobile-link mt-4 btn-primary text-center bg-[#10B981] hover:bg-[#059669]">Agendar Valoracion</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero-gradient py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <span class="badge mb-6 bg-white/10 text-white border border-white/20">Neurotecnologias</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-4xl mx-auto" style="font-family:'Plus Jakarta Sans',sans-serif;">
+        Tecnologia especializada al servicio del bienestar cognitivo
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+        Integramos tecnologias avanzadas cuando clinicamente estan indicadas, no como soluciones universales.
+      </p>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <span class="badge mb-4">Enfoque</span>
+          <h2 class="section-title mb-6">Tecnologia con proposito clinico</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-4">
+            En Cognitiva Integral no utilizamos tecnologia por utilizar. Cada herramienta se integra cuando clinicamente esta indicada, como parte de un plan terapeutico personalizado.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Nuestro compromiso es ofrecer intervenciones basadas en evidencia, complementadas con tecnologia de vanguardia que potencia los resultados clínicos.
+          </p>
+        </div>
+        <div class="fade-in grid grid-cols-2 gap-4">
+          <div class="card text-center p-6">
+            <div class="service-icon mx-auto">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <p class="font-semibold text-navy">Basado en Evidencia</p>
+          </div>
+          <div class="card text-center p-6">
+            <div class="service-icon mx-auto">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <p class="font-semibold text-navy">No Invasivo</p>
+          </div>
+          <div class="card text-center p-6">
+            <div class="service-icon mx-auto">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <p class="font-semibold text-navy">Personalizado</p>
+          </div>
+          <div class="card text-center p-6">
+            <div class="service-icon mx-auto">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <p class="font-semibold text-navy">Data-Driven</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stimcer -->
+  <section class="py-16 md:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <span class="badge mb-4">Stimcer</span>
+        <h2 class="section-title mb-4">Casco terapeutico con 3 tecnologias</h2>
+        <p class="section-subtitle mx-auto">El Stimcer integra tres tecnologias clinicas en un solo dispositivo: no invasivo, sin dolor, sin medicamentos.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card fade-in p-8">
+          <div class="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy text-xl mb-3">EMTr</h3>
+          <p class="text-sm font-semibold text-[#0EA5E9] mb-3">Estimulacion Magnetica Transcraneal Repetitiva</p>
+          <p class="text-slate-600 leading-relaxed">
+            Utiliza pulsos magneticos para estimular zonas especificas de la corteza cerebral, modulando la actividad neuronal en areas que requieren intervencion.
+          </p>
+        </div>
+        <div class="card fade-in p-8">
+          <div class="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy text-xl mb-3">Fotobiomodulacion</h3>
+          <p class="text-sm font-semibold text-[#0EA5E9] mb-3">Terapia con Luz</p>
+          <p class="text-slate-600 leading-relaxed">
+            Aplica luz de longitudes de onda especificas para promover la regeneracion neuronal, mejorando la funcion celular y reduciendo la inflamacion.
+          </p>
+        </div>
+        <div class="card fade-in p-8">
+          <div class="w-16 h-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+          </div>
+          <h3 class="font-bold text-navy text-xl mb-3">Masaje y Acupresion</h3>
+          <p class="text-sm font-semibold text-[#0EA5E9] mb-3">Estimulacion Mecanica</p>
+          <p class="text-slate-600 leading-relaxed">
+            Combina tecnicas de masaje terapeutico y acupresion para promover la relajacion, mejorar la circulacion y reducir la tension muscular.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMT/EMTr Detail -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in order-2 md:order-1">
+          <div class="w-20 h-20 rounded-2xl bg-sky-50 flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h2 class="section-title mb-4">Estimulacion Magnetica Transcraneal</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-4">
+            La EMTr utiliza pulsos magneticos de alta frecuencia para estimular de forma precisa y selectiva las neuronas en areas especificas de la corteza cerebral.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Esta tecnologia permite modular la actividad cerebral sin necesidad de cirugia ni procedimientos invasivos, actuando directamente sobre las regiones que requieren intervencion.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="badge">No invasivo</span>
+            <span class="badge">Sin dolor</span>
+            <span class="badge">Sin medicamentos</span>
+            <span class="badge">Sin efectos secundarios</span>
+          </div>
+        </div>
+        <div class="fade-in order-1 md:order-2">
+          <div class="bg-gradient-to-br from-sky-50 to-sky-100 rounded-2xl p-8">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-5 h-5 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <p class="font-semibold text-navy text-sm">Precisa</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-5 h-5 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <p class="font-semibold text-navy text-sm">Rapida</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-5 h-5 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <p class="font-semibold text-navy text-sm">Segura</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 text-center">
+                <div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-5 h-5 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <p class="font-semibold text-navy text-sm">Efectiva</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fotobiomodulacion Detail -->
+  <section class="py-16 md:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8">
+            <div class="space-y-4">
+              <div class="bg-white rounded-xl p-5 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Regeneracion neuronal</p>
+                  <p class="text-sm text-slate-500">Estimula la produccion de ATP celular</p>
+                </div>
+              </div>
+              <div class="bg-white rounded-xl p-5 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Reduccion de inflamacion</p>
+                  <p class="text-sm text-slate-500">Disminuye marcadores inflamatorios</p>
+                </div>
+              </div>
+              <div class="bg-white rounded-xl p-5 flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-navy">Mejora del flujo sanguineo</p>
+                  <p class="text-sm text-slate-500">Aumenta la circulacion en areas target</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="w-20 h-20 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h2 class="section-title mb-4">Fotobiomodulacion</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-4">
+            Utiliza luz de longitudes de onda especificas (roja e infrarroja) para estimular procesos biologicos a nivel celular, promoviendo la regeneracion y reparacion neuronal.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Esta terapia incrementa la produccion de energia celular (ATP), reduce el estres oxidativo y promueve la neuroplasticidad, facilitando la recuperacion de funciones cognitivas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vagus Nerve -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in order-2 md:order-1">
+          <div class="w-20 h-20 rounded-2xl bg-sky-50 flex items-center justify-center mb-6">
+            <svg class="w-10 h-10 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/></svg>
+          </div>
+          <h2 class="section-title mb-4">Estimulacion del Nervio Vago</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-4">
+            La estimulacion del nervio vago (ENV) modula el sistema nervioso parasimpatico, mejorando la regulacion del estado de animo, la respuesta al estres y la funcion cognitiva.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            Esta tecnologia permite una intervencion precisa sobre el eje cerebro-cuerpo, potenciando los efectos de otras terapias y mejorando el bienestar general del paciente.
+          </p>
+        </div>
+        <div class="fade-in order-1 md:order-2 grid grid-cols-2 gap-4">
+          <div class="card p-5">
+            <svg class="w-8 h-8 text-[#0EA5E9] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <p class="font-semibold text-navy text-sm">Regulacion del sistema nervioso</p>
+          </div>
+          <div class="card p-5">
+            <svg class="w-8 h-8 text-[#0EA5E9] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <p class="font-semibold text-navy text-sm">Mejora del estado de animo</p>
+          </div>
+          <div class="card p-5">
+            <svg class="w-8 h-8 text-[#0EA5E9] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            <p class="font-semibold text-navy text-sm">Reduccion del estres</p>
+          </div>
+          <div class="card p-5">
+            <svg class="w-8 h-8 text-[#0EA5E9] mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            <p class="font-semibold text-navy text-sm">Potencia otras terapias</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who It's For -->
+  <section class="py-16 md:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <span class="badge mb-4">Para quien?</span>
+        <h2 class="section-title mb-4">Beneficiarios de las neurotecnologias</h2>
+        <p class="section-subtitle mx-auto">Nuestras tecnologias benefician a personas con diversas condiciones que afectan el bienestar cognitivo y emocional.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Insomnio</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Depresion</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Ansiedad</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Adicciones</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">TDAH</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">TEA</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Problemas de Memoria</h3>
+        </div>
+        <div class="card fade-in p-6 text-center">
+          <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#0EA5E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <h3 class="font-bold text-navy">Demencia</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <span class="badge mb-4">Proceso</span>
+        <h2 class="section-title mb-4">Como funciona el tratamiento?</h2>
+        <p class="section-subtitle mx-auto">Un proceso estructurado que integra tecnologia con atencion clinica personalizada.</p>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-8">
+        <div class="process-step fade-in">
+          <div class="relative z-10 w-12 h-12 rounded-full bg-[#0EA5E9] text-white flex items-center justify-center font-bold text-lg shrink-0">1</div>
+          <div class="card p-6 flex-1">
+            <h3 class="font-bold text-navy text-lg mb-2">Evaluacion</h3>
+            <p class="text-slate-600">Evaluacion clinica completa para determinar si la tecnologia es indicada para el caso especifico del paciente.</p>
+          </div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="relative z-10 w-12 h-12 rounded-full bg-[#0EA5E9] text-white flex items-center justify-center font-bold text-lg shrink-0">2</div>
+          <div class="card p-6 flex-1">
+            <h3 class="font-bold text-navy text-lg mb-2">Protocolo de Estimulacion</h3>
+            <p class="text-slate-600">Diseno de un protocolo personalizado con parametros especificos de frecuencia, intensidad y duracion.</p>
+          </div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="relative z-10 w-12 h-12 rounded-full bg-[#0EA5E9] text-white flex items-center justify-center font-bold text-lg shrink-0">3</div>
+          <div class="card p-6 flex-1">
+            <h3 class="font-bold text-navy text-lg mb-2">Sesiones</h3>
+            <p class="text-slate-600">Sesiones regulares de estimulacion, supervisadas por profesionales clinicos especializados.</p>
+          </div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="relative z-10 w-12 h-12 rounded-full bg-[#0EA5E9] text-white flex items-center justify-center font-bold text-lg shrink-0">4</div>
+          <div class="card p-6 flex-1">
+            <h3 class="font-bold text-navy text-lg mb-2">Seguimiento</h3>
+            <p class="text-slate-600">Monitoreo continuo del progreso, con ajustes al protocolo segun la respuesta individual del paciente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Message -->
+  <section class="py-16 md:py-24 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="bg-gradient-to-br from-navy to-slate-800 rounded-2xl p-8 md:p-12 text-center fade-in">
+        <div class="w-16 h-16 rounded-2xl bg-[#10B981]/20 flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-[#10B981]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4" style="font-family:'Plus Jakarta Sans',sans-serif;">El Stimcer no reemplaza el acompanamiento clinico: lo potencia.</h2>
+        <p class="text-slate-300 max-w-2xl mx-auto text-lg">
+          Nuestra tecnologia complementa el trabajo clinico, no lo sustituye. Cada intervencion tecnologica se integra dentro de un plan terapeutico integral supervisado por profesionales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 md:py-24 bg-white" id="contacto">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <span class="badge mb-4">Contacto</span>
+        <h2 class="section-title mb-4">Agenda tu valoracion</h2>
+        <p class="section-subtitle mx-auto">Cuentanos sobre tu caso y determinaremos si las neurotecnologias pueden beneficiarte.</p>
+      </div>
+      <form data-validate class="card p-8 space-y-6 fade-in">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-navy mb-2">Nombre completo *</label>
+            <input type="text" name="nombre" required class="form-input" placeholder="Tu nombre">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-navy mb-2">Correo electronico *</label>
+            <input type="email" name="email" required class="form-input" placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-navy mb-2">Telefono *</label>
+            <input type="tel" name="telefono" required class="form-input" placeholder="Tu telefono">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-navy mb-2">Motivo de consulta *</label>
+            <select name="motivo" required class="form-input">
+              <option value="">Selecciona una opcion</option>
+              <option>Neurotecnologias / Stimcer</option>
+              <option>EMT / EMTr</option>
+              <option>Fotobiomodulacion</option>
+              <option>Estimulacion del nervio vago</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-navy mb-2">Mensaje</label>
+          <textarea name="mensaje" rows="4" class="form-input" placeholder="Cuentanos brevemente sobre tu situacion..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full bg-[#10B981] hover:bg-[#059669] text-lg">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/573162282769" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-[#0EA5E9] flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <span class="text-lg font-bold" style="font-family:'Plus Jakarta Sans',sans-serif;">Cognitiva Integral</span>
+          </a>
+          <p class="text-slate-400 text-sm leading-relaxed">Centro de neurocognicion integral. Evaluacion, rehabilitacion y potenciacion de funciones cognitivas.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Servicios</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li><a href="rehabilitacion-cognitiva.html" class="hover:text-white transition-colors">Rehabilitacion Cognitiva</a></li>
+            <li><a href="evaluacion-cerebral.html" class="hover:text-white transition-colors">Evaluacion Cerebral</a></li>
+            <li><a href="neurotecnologias.html" class="hover:text-white transition-colors">Neurotecnologias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contacto</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +57 316 228 2769
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              integralcognitiva@gmail.com
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Cl. 13b #13-100, piso 3, Valledupar, Cesar
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              @cognitivaintegral
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Horario</h4>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li>Lunes a viernes: 8:00am - 12:01pm y 2:00pm - 6:00pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-6 text-center text-slate-500 text-sm">
+        &copy; 2026 Cognitiva Integral. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
