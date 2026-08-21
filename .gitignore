@@ -1,0 +1,18 @@
+# Dependencias
+node_modules/
+
+# Build
+dist/
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Sistema / logs
+.DS_Store
+*.log
+Thumbs.db
+
+# Documentos internos (no publicar en el repo)
+/Documento Estratégico de Posicionamiento.docx
