@@ -118,14 +118,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 48rem;
 }
 
-/* Top bar */
-.top-bar {
-  font-size: 0.875rem;
-  padding: 0.5rem 0;
-  background-color: var(--navy);
-  color: white;
-}
-
 /* Navbar */
 .navbar {
   position: sticky;

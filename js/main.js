@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Build mailto link as fallback
         var subject = 'Contacto desde la web - ' + (servicio || 'General');
         var body = 'Nombre: ' + nombre + '\nEmail: ' + email_val + '\nTeléfono: ' + telefono + '\nServicio: ' + servicio + '\n\nMensaje:\n' + mensaje;
-        window.location.href = 'mailto:integralcognitiva@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        window.location.href = 'mailto:contacto@cognitivaintegral.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         showSuccess(form);
       }
     });
