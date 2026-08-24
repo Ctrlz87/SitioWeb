@@ -1,0 +1,805 @@
+# COGNITIVA INTEGRAL — CURSORRULES
+
+
+## Reglas de respuesta de IA:
+- No expliques teoría ni cómo funciona el código a menos que te lo pida expresamente.
+- Entrega código modular, limpio y directamente listo para copiar/pegar.
+
+## 3. USO EFICIENTE DEL CONTEXTO Y TOKENS
+
+REGLA CRÍTICA:
+
+No leas todo el proyecto antes de comenzar una tarea.
+
+Primero:
+1. Identifica qué archivos probablemente están relacionados con la solicitud.
+2. Lee únicamente esos archivos.
+3. Analiza dependencias solo si son necesarias.
+4. Realiza el cambio.
+5. Verifica únicamente lo que pueda haberse afectado.
+
+NO:
+- recorras todo `src/` innecesariamente;
+- leas todos los componentes;
+- leas documentación que no sea relevante;
+- analices archivos que no estén relacionados;
+- repitas información que ya conoces;
+- expliques extensamente lo que vas a hacer antes de hacerlo.
+
+Usa lectura progresiva:
+- primero estructura;
+- después archivo relevante;
+- después archivos relacionados solo si son necesarios.
+
+Si una tarea puede resolverse modificando 1 archivo, no analices 10.
+
+##COMPORTAMIENTO DE RESPUESTA
+
+Sé directo.
+
+Antes de modificar:
+- determina la solución;
+- si no existe una ambigüedad bloqueante, ejecuta directamente.
+
+No preguntes por preferencias menores.
+
+Si existen varias soluciones:
+- elige la más simple;
+- usa las tecnologías ya presentes;
+- explica la decisión en una frase al finalizar.
+
+Después de realizar cambios responde brevemente NO entregues explicaciones largas salvo que el usuario las solicite.
+Evita reescribir archivos completos si solo es necesario modificar una sección.
+
+## 1. CONTEXTO DEL PROYECTO
+
+Cognitiva Integral es un **sitio web profesional e institucional**, no una aplicación web.
+
+El sitio tiene como propósito:
+
+* presentar la marca;
+* explicar los servicios;
+* generar confianza;
+* posicionarse en buscadores;
+* educar al visitante;
+* permitir contacto;
+* permitir agendamiento de citas.
+
+Cognitiva Integral ofrece servicios relacionados con:
+
+* Psicología.
+* Neuropsicología.
+* Psicoterapia.
+* Atención psicológica a niños.
+* Atención psicológica a adolescentes.
+* Atención psicológica a adultos.
+* Orientación a familias.
+* Asesoría a instituciones educativas.
+* Evaluación neuropsicológica.
+* Neurofeedback, cuando corresponda a los servicios realmente ofrecidos.
+
+El sitio debe comunicar:
+
+**Ciencia + humanidad + cercanía + profesionalismo + tecnología.**
+
+La principal referencia de arquitectura y conversión es **Peak Brain Institute**.
+
+La principal referencia de comunicación, experiencia de usuario y confianza es **Vital Brain Health**.
+
+Las referencias sirven exclusivamente como inspiración. No copiar textos, imágenes, código, identidad visual ni elementos protegidos de terceros.
+
+---
+
+# 2. OBJETIVO DEL SITIO
+
+El visitante debe poder responder rápidamente:
+
+* ¿Qué es Cognitiva Integral?
+* ¿Qué servicios ofrece?
+* ¿Para quién son?
+* ¿Quién presta los servicios?
+* ¿Cómo trabajan?
+* ¿Qué es el neurofeedback?
+* ¿Cómo puedo contactarles?
+* ¿Cómo puedo agendar?
+
+Objetivo principal:
+
+**convertir visitantes en contactos y citas.**
+
+CTA principales:
+
+* Agendar cita.
+* Solicitar información.
+* Hablar por WhatsApp.
+
+---
+
+# 3. TIPO DE PRODUCTO
+
+Este proyecto es:
+
+**SITIO WEB ESTÁTICO / SITIO WEB PROFESIONAL / SITIO WEB INSTITUCIONAL**
+
+No es:
+
+* SaaS.
+* Aplicación web.
+* Sistema administrativo.
+* CRM.
+* Sistema de pacientes.
+* Aplicación de reservas propia.
+* Plataforma de usuarios.
+* Aplicación con autenticación.
+
+Por tanto, **no implementar infraestructura de aplicación si no es necesaria**.
+Siempre se diseña para moviles, tabletas y monitores de pc, debe ser responsive.
+---
+
+La mayor parte del sitio debe generar HTML estático.
+
+No convertir el sitio en una SPA innecesariamente.
+
+---
+
+# 4. STACK OBLIGATORIO
+
+## Styling
+
+* TailwindCSS.
+
+## Interactividad
+
+Prioridad:
+
+1. HTML/CSS.
+2. JavaScript nativo.
+3. Astro.
+
+---
+
+# 5. HERRAMIENTAS GRATUITAS
+
+La estrategia del proyecto es **costo mínimo**.
+
+Objetivo:
+
+```text
+Código                  $0
+Astro                   $0
+TailwindCSS             $0
+Lucide                  $0
+GitHub                  $0
+Hosting                 $0
+Cal.com
+cloudflare pages	$0                 $0
+Analytics               $0
+CMS                     $0
+Automatización básica   $0
+Dominio .com            aproximadamente USD 10–15/año
+```
+
+El único costo previsto inicialmente debe ser el dominio.
+
+No integrar servicios pagos salvo autorización explícita.
+
+---
+
+# 7. HOSTING
+
+Prioridad:
+
+1. Cloudflare Pages.
+2. Vercel.
+3. Netlify.
+4. Otra plataforma gratuita compatible con Astro.
+
+El sitio debe poder desplegarse como contenido estático.
+
+No asumir que se necesita un servidor backend.
+
+---
+
+# 8. REGLA DE ARQUITECTURA ESTÁTICA
+
+Preferir siempre:
+
+```text
+Static Site Generation
+```
+
+sobre:
+
+```text
+Server-side rendering
+```
+
+salvo que exista una necesidad real.
+
+No introducir SSR simplemente porque Astro lo permita.
+
+---
+
+# 9. BACKEND
+
+No implementar backend en el MVP.
+
+No utilizar:
+
+* Node.js como backend.
+* Express.
+* APIs propias.
+* JWT.
+* autenticación.
+* PostgreSQL.
+* ORM.
+* servidores de aplicaciones.
+
+El proyecto no necesita estas tecnologías para cumplir su objetivo.
+
+Si posteriormente aparece una necesidad real, podrá incorporarse un backend separado.
+
+---
+
+# 10. BASE DE DATOS
+
+No utilizar base de datos en el MVP.
+
+El contenido del sitio debe gestionarse mediante:
+
+* archivos Astro;
+* TypeScript;
+* Markdown;
+* MDX cuando sea necesario;
+* Astro Content Collections.
+
+No almacenar contenido institucional en una base de datos.
+
+---
+
+# 11. CONTENIDO
+
+Utilizar Astro Content Collections para:
+
+* artículos;
+* recursos;
+* preguntas frecuentes cuando sea apropiado;
+* contenidos educativos.
+
+Ejemplo:
+
+```text
+src/content/
+├── blog/
+├── recursos/
+└── faq/
+```
+
+Los contenidos deben poder editarse sin modificar componentes.
+y si vas a agregar un contenido debes solicitarlo antes de aplicarlo
+
+---
+
+# 12. ESTRUCTURA DEL PROYECTO
+
+Propuesta:
+
+```text
+cognitiva-integral/
+├── public/
+│   ├── images/
+│   ├── icons/
+│   ├── favicon.svg
+│   ├── robots.txt
+│   └── sitemap.xml
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── content/
+│   ├── data/
+│   ├── layouts/
+│   ├── pages/
+│   ├── styles/
+│   └── utils/
+│
+├── astro.config.ts
+├── tsconfig.json
+├── package.json
+├── .env.example
+├── .gitignore
+└── README.md
+```
+
+---
+
+# 13. COMPONENTES
+
+Crear componentes pequeños y reutilizables.
+
+Ejemplos:
+
+```text
+Header
+MobileMenu
+Footer
+Button
+SectionHeader
+ServiceCard
+AudienceCard
+ProcessStep
+TestimonialCard
+ArticleCard
+FaqAccordion
+CTASection
+WhatsAppButton
+BookingButton
+```
+
+Los componentes deben utilizar Astro cuando no requieran estado.
+
+---
+
+# 14. REACT
+
+React no es el framework principal.
+
+Solo puede utilizarse mediante una isla Astro cuando exista una interacción real que lo justifique.
+
+Ejemplos potenciales:
+
+* componente avanzado de formulario;
+* interacción compleja;
+* calculadora;
+* experiencia interactiva.
+
+No utilizar React para:
+
+* Header.
+* Footer.
+* Card.
+* Hero.
+* contenido;
+* botones;
+* secciones estáticas.
+
+---
+
+# 15. TYPESCRIPT
+
+Todo el código debe estar estrictamente tipado.
+
+Prohibido:
+
+```typescript
+any
+```
+
+No utilizar JavaScript sin necesidad.
+
+Utilizar:
+
+* interfaces;
+* types;
+* unions;
+* generics;
+* type guards.
+
+---
+
+# 16. DISEÑO VISUAL
+
+Dirección:
+
+**profesional + científica + humana + cálida + moderna.**
+
+Evitar:
+
+* estética hospitalaria;
+* exceso de azul;
+* apariencia tecnológica exagerada;
+* exceso de elementos futuristas;
+* páginas saturadas;
+* animaciones constantes.
+
+Priorizar:
+
+* espacios amplios;
+* fotografías reales;
+* tipografía elegante;
+* tarjetas limpias;
+* colores naturales;
+* jerarquía visual;
+* CTA claros.
+
+---
+
+# 17. REFERENCIAS DE DISEÑO
+
+## Peak Brain Institute
+
+Tomar como inspiración:
+
+* propuesta de valor;
+* estructura comercial;
+* CTA;
+* explicación del proceso;
+* servicios;
+* neurofeedback;
+* personalización;
+* testimonios;
+* recorrido de conversión.
+
+## Vital Brain Health
+
+Tomar como inspiración:
+
+* comunicación humana;
+* segmentación;
+* claridad;
+* confianza;
+* presentación de servicios;
+* profesionales;
+* testimonios;
+* contenido educativo;
+* CTA.
+
+No copiar diseños.
+
+---
+
+# 18. PROPUESTA DE VALOR
+
+No presentar Cognitiva Integral solamente como:
+
+"un centro de neurofeedback".
+
+El sitio debe posicionar una propuesta más amplia:
+
+**Psicología + Neuropsicología + Educación + Familia + Tecnología.**
+
+Neurofeedback debe funcionar como un elemento diferenciador dentro del ecosistema de servicios.
+
+---
+
+# 19. HERO
+
+El Hero debe contener:
+
+* headline;
+* subtítulo;
+* CTA principal;
+* CTA secundario;
+* imagen;
+* microelemento de confianza.
+
+El usuario debe comprender la propuesta rápidamente.
+
+No sobrecargar el Hero.
+
+---
+
+# 20. SERVICIOS
+
+Servicios iniciales:
+
+* Psicoterapia.
+* Neuropsicología.
+* Evaluación neuropsicológica.
+* Neurofeedback.
+* Orientación familiar.
+* Asesoría educativa.
+
+Los servicios deben almacenarse como datos estructurados.
+
+No duplicar código para cada tarjeta.
+
+---
+
+# 21. SEGMENTACIÓN
+
+El sitio debe facilitar la identificación del usuario:
+
+* Niños.
+* Adolescentes.
+* Adultos.
+* Familias.
+* Instituciones educativas.
+
+No inventar segmentaciones que el negocio no haya validado.
+
+---
+
+# 22. NEUROFEEDBACK
+
+Explicar:
+
+* qué es;
+* cómo se utiliza;
+* para quién puede ser útil;
+* cómo es una sesión;
+* cómo se integra con el proceso profesional;
+* cómo se realiza el seguimiento.
+
+No utilizar promesas absolutas.
+
+Evitar:
+
+* "cura";
+* "garantiza";
+* "elimina";
+* "resultados asegurados".
+
+---
+
+# 23. INFORMACIÓN DE SALUD
+
+El sitio es educativo e informativo.
+
+No realizar diagnósticos mediante el sitio.
+
+No inducir autodiagnóstico.
+
+No hacer afirmaciones clínicas no sustentadas.
+
+No inventar evidencia científica.
+
+---
+
+# 24. TESTIMONIOS
+
+No inventar testimonios.
+
+Si no existen testimonios autorizados:
+
+* no crear testimonios ficticios;
+* utilizar elementos de confianza alternativos.
+
+---
+
+# 25. PROFESIONAL
+
+No inventar:
+
+* títulos;
+* especializaciones;
+* experiencia;
+* certificaciones;
+* publicaciones;
+* asociaciones.
+
+Utilizar únicamente información suministrada por el negocio.
+
+---
+
+# 26. AGENDAMIENTO
+
+Utilizar Cal.com.
+
+No desarrollar calendario propio.
+
+Flujo:
+
+```text
+CTA
+↓
+Cal.com
+↓
+Servicio
+↓
+Fecha
+↓
+Hora
+↓
+Confirmación
+```
+
+El sitio debe desacoplar el botón de agendamiento para poder cambiar de proveedor posteriormente.
+
+---
+
+# 27. WHATSAPP
+
+Utilizar enlace directo de WhatsApp.
+
+No implementar API de WhatsApp en el MVP.
+
+No almacenar conversaciones.
+
+---
+
+# 28. FORMULARIOS
+
+Los formularios no deben convertir el sitio en una aplicación.
+
+Prioridad:
+
+1. WhatsApp.
+2. Cal.com.
+3. Email.
+4. Formulario externo gratuito solamente si realmente aporta valor.
+
+No almacenar inicialmente datos en una base propia.
+
+No solicitar información clínica sensible.
+
+---
+
+# 29. SEO
+
+El sitio debe estar preparado para SEO desde el inicio.
+
+Implementar:
+
+* title;
+* meta description;
+* canonical;
+* Open Graph;
+* sitemap;
+* robots;
+* headings semánticos;
+* alt;
+* URLs limpias;
+* datos estructurados;
+* contenido educativo.
+
+---
+
+# 30. BLOG Y RECURSOS
+
+Utilizar Astro Content Collections.
+
+No incorporar un CMS externo inicialmente.
+
+Ejemplo:
+
+```text
+src/content/blog/
+├── que-es-neurofeedback.md
+├── evaluacion-neuropsicologica.md
+└── psicologia-infantil.md
+```
+
+---
+
+# 31. ACCESIBILIDAD
+
+Implementar:
+
+* HTML semántico;
+* navegación por teclado;
+* labels;
+* alt;
+* contraste;
+* estados focus;
+* botones accesibles;
+* headings correctos.
+
+---
+
+# 32. PERFORMANCE
+
+Como Astro genera contenido estático, priorizar:
+
+* pocas dependencias;
+* imágenes optimizadas;
+* lazy loading;
+* fuentes optimizadas;
+* mínimo JavaScript;
+* componentes estáticos;
+* no cargar React salvo necesidad.
+
+Objetivo:
+
+**HTML rápido + mínimo JavaScript.**
+
+---
+
+# 33. ANIMACIONES
+
+Utilizar animaciones discretas:
+
+* fade;
+* hover;
+* transición;
+* reveal.
+
+No utilizar librerías pesadas de animación sin necesidad.
+
+---
+
+# 34. ICONOS
+
+Preferencia:
+
+```text
+lucide-astro
+```
+
+Si se usa React dentro de una isla:
+
+```text
+lucide-react
+```
+
+No instalar otras librerías de iconos.
+
+---
+
+# 35. DOCKER
+
+Docker no es obligatorio para el MVP.
+
+Puede utilizarse opcionalmente para desarrollo local, pero no debe introducirse solamente por arquitectura anterior.
+
+El desarrollo normal debe poder ejecutarse con:
+
+```bash
+npm install
+npm run dev
+```
+
+y producir:
+
+```bash
+npm run build
+```
+
+---
+
+# 36. GIT
+
+No versionar:
+
+```text
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+```
+
+Cada sprint debe generar un commit independiente.
+
+---
+
+# 37. CURSOR
+
+Antes de modificar código:
+
+1. Revisar estructura actual.
+2. Leer este archivo.
+3. Reutilizar componentes.
+4. No modificar archivos no relacionados.
+5. No instalar paquetes innecesarios.
+6. No incorporar backend.
+7. No convertir Astro en SPA.
+8. Ejecutar build.
+9. Revisar responsive.
+10. Mantener SEO.
+
+---
+
+# 38. PRINCIPIO DE SIMPLICIDAD
+
+Ante dos soluciones posibles elegir la que:
+
+1. sea estática;
+2. cueste menos;
+3. tenga menos dependencias;
+4. genere menos JavaScript;
+5. sea más fácil de mantener;
+6. sea más segura;
+7. requiera menos infraestructura.
+
+---
+
+# 39. REGLA FUNDAMENTAL
+
+Este proyecto es un:
+
+**sitio web profesional, rápido, SEO-friendly y de bajo costo.**
+
+No construir una aplicación cuando un sitio estático puede resolver la necesidad.
+
+La arquitectura debe ser simple hoy y permitir crecer mañana.
