@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cognitivaintegral.com/index.html</loc>
+    <loc>https://cognitivaintegral.com/</loc>
     <lastmod>2026-08-24</lastmod>
     <priority>1.0</priority>
   </url>
@@ -62,17 +62,22 @@
   </url>
   <url>
     <loc>https://cognitivaintegral.com/blog-tdah-ninos.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cognitivaintegral.com/blog-evaluacion-neuropsicologica.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://cognitivaintegral.com/blog-rehabilitacion-cognitiva.html</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-24</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://cognitivaintegral.com/blog-entrenamiento-cerebral.html</loc>
+    <lastmod>2026-08-24</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
