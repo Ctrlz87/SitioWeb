@@ -22,6 +22,8 @@
     }
   </script>
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Preload del primer frame del hero -->
+  <link rel="preload" as="image" href="assets/images/hero-frame-01.webp" />
   <!-- SEO: canonical, Open Graph, Twitter Card y favicon -->
   <link rel="canonical" href="https://cognitivaintegral.com/">
   <meta name="robots" content="index, follow">
@@ -185,37 +187,38 @@
   </div>
 
   <!-- HERO SECTION -->
-  <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#0F172A] to-[#164E63]">
+  <section id="inicio" class="hero-section relative bg-[#0F172A]">
     <div class="max-w-7xl mx-auto px-4 py-16 md:py-20 lg:py-24">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-        <div class="text-center lg:text-left">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
+        <!-- Texto -->
+        <div class="text-center lg:text-left hero-copy order-2 md:order-1">
           <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-[#0EA5E9] text-xs md:text-sm font-semibold rounded-full px-4 py-1.5 mb-6">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
             Centro Especializado en Bienestar Cognitivo
           </span>
           <h1 class="font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-[3.4rem] leading-tight text-white mb-6">Psicología y Neuropsicología en Valledupar: comprende, cuida y fortalece tu mente</h1>
-          <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
-            Ayudamos a comprender, cuidar y fortalecer el funcionamiento cognitivo mediante evaluacion especializada, intervencion interdisciplinaria y programas personalizados de entrenamiento cerebral.
+          <p class="text-gray-200 text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+            Ayudamos a comprender, cuidar y fortalecer el funcionamiento cognitivo mediante evaluación especializada, intervención interdisciplinaria y programas personalizados de entrenamiento cerebral.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white font-semibold rounded-md px-6 py-3 transition-colors shadow-lg shadow-[#10B981]/25">Agendar Valoracion</a>
+            <a href="#contacto" class="inline-flex items-center justify-center gap-2 bg-[#10B981] hover:bg-[#059669] text-white font-semibold rounded-md px-6 py-3 transition-colors shadow-lg shadow-[#10B981]/25">Agendar Valoración</a>
             <a href="#servicios" class="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white font-semibold rounded-md px-6 py-3 transition-colors hover:bg-white/10">Conoce Nuestros Servicios</a>
           </div>
         </div>
-        <div class="flex items-center justify-center mt-8 md:mt-0">
-          <img 
-            src="assets/images/hero-cerebro.webp" 
-            alt="Cognitiva Integral - Bienestar Cognitivo"
-            class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 object-cover object-top rounded-2xl shadow-2xl"
-            width="892" 
-            height="847"
-            loading="eager"
-            decoding="async"
-          />
+        <!-- Slideshow de imágenes -->
+        <div class="order-1 md:order-2 flex justify-center">
+          <div class="hero-slideshow">
+            <img class="hero-slide" src="assets/images/hero-frame-01.webp" alt="Cognitiva Integral - Bienestar Cognitivo" loading="eager" decoding="async" data-hero-slide="0" />
+            <img class="hero-slide" src="assets/images/hero-frame-02.webp" alt="Cognitiva Integral - Evaluación y diagnóstico" loading="lazy" decoding="async" data-hero-slide="1" />
+            <img class="hero-slide" src="assets/images/hero-frame-03.webp" alt="Cognitiva Integral - Rehabilitación cognitiva" loading="lazy" decoding="async" data-hero-slide="2" />
+            <img class="hero-slide" src="assets/images/hero-frame-04.webp" alt="Cognitiva Integral - Entrenamiento cerebral" loading="lazy" decoding="async" data-hero-slide="3" />
+          </div>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-0 left-0 right-0">
+
+    <!-- Ola inferior -->
+    <div class="absolute bottom-0 left-0 right-0 z-20">
       <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"><path d="M0 80L60 73.3C120 66.7 240 53.3 360 46.7C480 40 600 40 720 43.3C840 46.7 960 53.3 1080 56.7C1200 60 1320 60 1380 60L1440 60V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="white"/></svg>
     </div>
   </section>
