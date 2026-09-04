@@ -234,11 +234,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function startSlideshow() {
-      if (reducedMotion) {
-        showSlide(0);
-        return;
-      }
       showSlide(0);
+      if (reducedMotion) return;
       heroTimer = setInterval(function() {
         var next = (currentSlide + 1) % slideCount;
         showSlide(next);
